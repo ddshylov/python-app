@@ -11,7 +11,7 @@ from aiogram.types import Message
 from aiogram.utils.markdown import hbold
 
 # Bot token can be obtained via https://t.me/BotFather
-TOKEN = getenv(BOT_TOKEN)
+BOT_TOKEN = '6914481314:AAHcu71z5ttRHx5H9mujeNPo9SSSpaDfTZM'
 
 # All handlers should be attached to the Router (or Dispatcher)
 dp = Dispatcher()
@@ -47,7 +47,7 @@ async def echo_handler(message: types.Message) -> None:
 
 async def main() -> None:
     # Initialize Bot instance with a default parse mode which will be passed to all API calls
-    bot = Bot(TOKEN, parse_mode=ParseMode.HTML)
+    bot = Bot(BOT_TOKEN, parse_mode=ParseMode.HTML)
     # And the run events dispatching
     await dp.start_polling(bot)
 
