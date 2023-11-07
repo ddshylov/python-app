@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-RUN apt update && apt install python3 -y
+FROM python:3.11.6-alpine3.18
+RUN python -m pip install https://github.com/aiogram/aiogram/archive/refs/heads/dev-3.x.zip
 WORKDIR /app
-COPY /main.py /app/main.py
+COPY /*.py /app
 CMD python3 main.py
